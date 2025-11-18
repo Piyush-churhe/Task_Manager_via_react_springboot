@@ -1,7 +1,7 @@
 // src/services/api.js
 
 // Base URL for your Spring Boot backend
-const BASE_URL = 'http://localhost:8080/api';
+const BASE_URL = 'https://task-manager-via-react-springboot-7.onrender.com/api';
 
 // Helper function to get auth headers
 const getAuthHeaders = () => {

@@ -21,7 +21,7 @@ const Notification = ({ username }) => {
 
   const connectWebSocket = () => {
     const client = new Client({
-      webSocketFactory: () => new SockJS('http://localhost:8080/ws'),
+      webSocketFactory: () => new SockJS('https://task-manager-via-react-springboot-7.onrender.com/ws'),
       reconnectDelay: 5000,
       onConnect: () => {
         client.subscribe(`/topic/notifications/${username}`, (message) => {

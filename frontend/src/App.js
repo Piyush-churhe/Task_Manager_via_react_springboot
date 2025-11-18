@@ -106,7 +106,7 @@ const Login = ({ onLogin }) => {
     setError('');
 
     try {
-      const url = isLogin ? 'http://localhost:8080/api/auth/login' : 'http://localhost:8080/api/auth/register';
+      const url = isLogin ? 'https://task-manager-via-react-springboot-7.onrender.com/api/auth/login' : 'https://task-manager-via-react-springboot-7.onrender.com/api/auth/register';
 
       console.log('Sending request to:', url);
       console.log('Request data:', { username: formData.username, password: formData.password, email: formData.email });
@@ -139,7 +139,7 @@ const Login = ({ onLogin }) => {
       }
     } catch (error) {
       console.error('Network error:', error);
-      setError('Network error. Please check if backend is running on port 8080.');
+      setError('Network error. Please check your connection.');
     } finally {
       setIsLoading(false);
     }
@@ -343,7 +343,7 @@ const TaskForm = ({ onTaskAdded }) => {
         return;
       }
 
-      const response = await fetch('http://localhost:8080/api/tasks', {
+      const response = await fetch('https://task-manager-via-react-springboot-7.onrender.com/api/tasks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -461,7 +461,7 @@ const TaskItem = ({ task, onDelete, onUpdate }) => {
     setIsLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:8080/api/tasks/${task.id}`, {
+      const response = await fetch(`https://task-manager-via-react-springboot-7.onrender.com/api/tasks/${task.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -499,7 +499,7 @@ const TaskItem = ({ task, onDelete, onUpdate }) => {
   const toggleCompletion = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:8080/api/tasks/${task.id}`, {
+      const response = await fetch(`https://task-manager-via-react-springboot-7.onrender.com/api/tasks/${task.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -628,7 +628,7 @@ const TaskList = () => {
         return;
       }
 
-      const response = await fetch('http://localhost:8080/api/tasks', {
+      const response = await fetch('https://task-manager-via-react-springboot-7.onrender.com/api/tasks', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -650,7 +650,7 @@ const TaskList = () => {
   const handleDeleteTask = async (taskId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:8080/api/tasks/${taskId}`, {
+      const response = await fetch(`https://task-manager-via-react-springboot-7.onrender.com/api/tasks/${taskId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
