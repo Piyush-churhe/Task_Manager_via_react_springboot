@@ -11,4 +11,4 @@ COPY . .
 RUN ./mvnw clean package -DskipTests
 
 # Run the backend
-CMD ["java", "-jar", "target/*.jar"]
+CMD ["java", "-jar", "target/task-manager-1.0.0.jar"]
