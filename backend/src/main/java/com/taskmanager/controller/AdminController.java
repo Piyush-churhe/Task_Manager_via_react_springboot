@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/admin")
-@CrossOrigin(origins = {"http://localhost:3000", "https://task-manager-via-react-springboot-7.onrender.com"})
+// CORS is handled globally in SecurityConfig
 public class AdminController {
 
     @Autowired

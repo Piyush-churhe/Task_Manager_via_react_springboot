@@ -55,11 +55,9 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        // Allow both localhost for development and Render frontend URL for production
-        configuration.setAllowedOrigins(Arrays.asList(
-            "http://localhost:3000",
-            "https://task-manager-via-react-springboot-7.onrender.com"
-        ));
+        // Allow all origins for now - replace with specific frontend URL for production security
+        // For development, localhost is still allowed
+        configuration.setAllowedOriginPatterns(Arrays.asList("*")); // Allow all origins temporarily
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);

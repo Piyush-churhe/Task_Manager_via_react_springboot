@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/tasks")
-@CrossOrigin(origins = {"http://localhost:3000", "https://task-manager-via-react-springboot-7.onrender.com"})
+// CORS is handled globally in SecurityConfig
 public class TaskController {
 
     @Autowired
