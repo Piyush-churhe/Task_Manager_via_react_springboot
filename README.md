@@ -3,8 +3,8 @@
 A secure and responsive full-stack Task Manager application built with **Spring Boot** backend and **React** frontend. Features user authentication, role-based access control, and complete task management capabilities.
 
 ## 🚀 Live Demo
-**Frontend URL:** `http://localhost:3000`  
-**Backend API:** `http://localhost:8080`
+**Frontend URL:** `https://task-manager-00.onrender.com/`  
+**Backend API:** `https://task-manager-0.onrender.com/`
 
 ## ✨ Features
 
@@ -159,4 +159,3 @@ npm run build
 - Email: churhepiyush@gmail.com
 - LinkedIn: [Piyush Churhe](https://www.linkedin.com/in/piyush-churhe/)
 - GitHub: [Piyush-churhe](https://github.com/Piyush-churhe)
-```
